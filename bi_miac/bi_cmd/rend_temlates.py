@@ -3,7 +3,7 @@ import jinja2
 from bi_miac.configs.base_conf import TEMPLATES_DIR
 
 
-def render_template(template_name: str, data: dict | None):
+def render_template(template_name: str, data: dict | None = None):
     if data is None:
         data = {}
     template = _get_template_env().get_template(template_name)
