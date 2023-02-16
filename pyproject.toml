@@ -8,6 +8,7 @@ packages = [{include = "bi_miac"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+strictyaml = "^1.6.2"
 
 
 [build-system]
