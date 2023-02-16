@@ -24,7 +24,7 @@ def action(com, dict, default="COMMAND NOT FOUND"):
             return default
 
 
-#print(render_template("greetings.j2"))
+print(render_template("greetings.j2"))
 
 kw = ""
 while kw.lower() != "exit":

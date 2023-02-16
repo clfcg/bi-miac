@@ -2,8 +2,9 @@ TYPES_DICT = {
     "text": "varchar",
     "num": "numeric",
     "date": "date",
-    "datetime": "datetime"
+    "datetime": "datetime",
 }
+
 
 def check_type(type_name: str):
     if type_name not in TYPES_DICT:
@@ -11,6 +12,17 @@ def check_type(type_name: str):
         return False
     else:
         return True
+    
 
-
-check_type("numeric")
+def set_len(type_name: str):
+    if type_name in ["text", "num"]:
+        return True
+    else:
+        return None
+    
+#fix this
+def check_data_filled(data):
+    while data == "":
+        print("Данные не введены!")
+        check_data_filled(data)
+    return data

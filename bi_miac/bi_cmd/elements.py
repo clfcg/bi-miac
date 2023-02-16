@@ -5,8 +5,8 @@ from dataclasses import dataclass
 class Tag:
     t_name: str
     t_type: str
-    t_sure: bool
     t_len: int | None
+    t_sure: bool
 
 
 @dataclass
