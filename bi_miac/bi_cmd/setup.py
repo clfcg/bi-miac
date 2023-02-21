@@ -12,7 +12,8 @@ if not Path(CONF_DIR, "reports.yaml").is_file():
 
 
 header_commands = {
-    "show": show_commands(),
+    "show": show_commands,
+    "add-full": add_full_header,
     "back": "back",
 }
 
@@ -33,5 +34,4 @@ while kw.lower() != "exit":
         while kw.lower() != "back":
             kw = input("bi/header: ")
             out = action(kw, header_commands)
-            if isinstance(out, str):
-                print(out)
+            out()
