@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from strictyaml import as_document
+
 
 @dataclass
 class Field_:
@@ -92,3 +94,16 @@ class Header:
             }
         }
         return header_dict
+    
+    def get_element_name(self, name):
+        self.e_name = name
+
+    def build_yaml(self):
+        header_dict = self.build_dict()
+        header_yaml = as_document(header_dict)
+        return header_yaml.as_yaml()
+    
+    def save_to_file(self, yaml_conf, file_name):
+        with open(file_name, "w") as f:
+            f.write(yaml_conf)
+

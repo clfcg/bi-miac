@@ -12,8 +12,10 @@ if not Path(CONF_DIR, "reports.yaml").is_file():
 
 
 header_commands = {
-    "show": show_commands,
+    "help": show_commands,
+    "show": show_header_sruct,
     "add-full": add_full_header,
+    "change-element": change_header_element_name,
     "back": "back",
 }
 
