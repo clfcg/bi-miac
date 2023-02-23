@@ -16,6 +16,7 @@ header_commands = {
     "show": show_header_sruct,
     "add-full": add_full_header,
     "change-element": change_header_element_name,
+    "add-tag": add_header_tags,
     "back": "back",
 }
 

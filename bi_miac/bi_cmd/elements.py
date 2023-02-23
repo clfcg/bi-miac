@@ -98,6 +98,9 @@ class Header:
     def get_element_name(self, name):
         self.e_name = name
 
+    def add_tag(self, tag: Tag):
+        self.tags.append(tag)
+
     def build_yaml(self):
         header_dict = self.build_dict()
         header_yaml = as_document(header_dict)
